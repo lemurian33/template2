@@ -137,7 +137,7 @@ const HowIWork = ({ className }) => {
                       }
                     }}
                     viewport={ { once: true}}
-                    className='text-2xl lg:text-4xl'>
+                    className='text-2xl lg:text-4xl text-white'>
                       { HowIWorkContent.heading.title }
                   </motion.h2>
                 )}
@@ -156,7 +156,7 @@ const HowIWork = ({ className }) => {
                       }
                     }}
                     viewport={ { once: true}}
-                    className='text-gray-500'>
+                    className='text-white'>
                     {HowIWorkContent.heading.description}
                   </motion.p>
                 )}
