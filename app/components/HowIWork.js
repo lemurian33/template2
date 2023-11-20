@@ -163,7 +163,7 @@ const HowIWork = ({ className }) => {
               </div>
             </div>
           </div>
-          <div className='grid grid-cols-1 lg:grid-cols-4 gap-4 -mb-72 lg:w-10/12 mx-auto'>
+          <div className='grid grid-cols-1 lg:grid-cols-4 gap-4 lg:w-10/12 mx-auto'>
             {HowIWorkContent.step.map((step, index) => {
               index *= 0.2
               return (
@@ -228,7 +228,7 @@ const HowIWork = ({ className }) => {
         </div>
       </section>
 
-      <section className="pt-64 lg:pt-60 pb-10 bg-orange-600">
+      {/* <section className="pt-64 lg:pt-60 pb-10 bg-orange-600">
         <div className='container px-4 mx-auto'>
           <div className="lg:flex justify-center">
             <div className='w-full lf:w-8/12 flex gap-0 items-center'>
@@ -285,7 +285,7 @@ const HowIWork = ({ className }) => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   )
 }

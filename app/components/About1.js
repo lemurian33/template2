@@ -35,43 +35,7 @@ const About = ({ className }) => {
 
   return (
     <section className={`${className}`} ref={ref}>
-      <div className="container px-4 mx-auto">
-        <div className="text-center lg:max-w-xl mx-auto mb-20 lg:mb-22 relative z-[5]">
-          {/* About - center - Subtitle */}
-          {aboutContent.heading.subTitle && (
-            <motion.span
-              initial={{ opacity:0 , y: 20 }}
-              whileInView={{
-                opacity:1,
-                y:0,
-                transition: {
-                  delay: 0.2,
-                  duration:0.5,
-                }
-              }}
-              viewport={ { once: true}}
-              className="uppercase tracking-[3px] text-[12.5px] mb-2 inline-block text-white font-semibold">
-                {aboutContent.heading.subTitle}
-            </motion.span>
-          )}
-          {/* About - center - Title */}
-          {aboutContent.heading.title && (
-            <motion.h2
-              initial={{ opacity: 0 , y: 20 }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-                transition: {
-                  delay: 0.3,
-                  duration: 0.5,
-                }
-              }}
-              viewport={ { once: true}}
-              className="text-2xl lg:text-4xl text-white">
-                {aboutContent.heading.title}
-            </motion.h2>
-          )}
-        </div>
+      <div className="container px-4 mx-auto">         
         {/* About - center - Card Image */}
         <div className="lg: flex justify-center">
           <div className="lg:w-8/12 lg:flex gap-20 items-center">
@@ -113,24 +77,7 @@ const About = ({ className }) => {
                 className="leading-relaxed mb-0 text-white">
                 {aboutContent.content.description}
               </motion.p>
-              <motion.p
-                initial = {{ opacity: 0, y: 10 }}
-                whileInView={{
-                  opacity: 1,
-                  y: 0,
-                  transition: {
-                    delay: 0.5,
-                    duration:0.5,
-                  }
-                }}
-                viewport={ { once: true}}>
-                {/* <Link href="/about" className="transistion-all duration-300
-                  ease-in-out text-[11.5px] tracking-[2px] font-bold uppercase
-                  bg-orange-600 py-4 px-5 rounded text-white inline-block
-                  hover:bg-white hover:text-orange-600 hover:shadow-2xl">
-                  {aboutContent.content.btn.label}
-                </Link> */}
-              </motion.p>
+           
             </div>
 
           </div>

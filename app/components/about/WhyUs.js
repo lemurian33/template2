@@ -26,6 +26,11 @@ const WhyUsContent = {
       title: "Client-Centered Approach",
       description : "We believe in collaboration. Your vision and goals are at the forefront of our design process.",
     },
+    {
+      icon: BiHardHat,
+      title: "Client-Centered Approach",
+      description : "We believe in collaboration. Your vision and goals are at the forefront of our design process.",
+    },
   ]
 
 }
@@ -41,7 +46,7 @@ const WhyUs = ({ className }) => {
   return (
     <section className={`${ className }`}>
       <div className="px-4 mx-auto container">
-        <div className="text-center lg:max-w-xl mx-auto mb-20 lg:mb-32">
+        <div className="text-center lg:max-w-xl mx-auto sm:mb-10 lg:mb-32">
           { WhyUsContent.heading.subTitle && (
             <motion.span
               initial={{opacity: 0, y: 20}}
@@ -51,7 +56,7 @@ const WhyUs = ({ className }) => {
                 transition: { delay: 0.2, duration: 0.5 }
               }}
               viewport={{ once: true}}
-              className='uppercase tracking-[3px] text-[12.5px] mb-5 inline-block text-gray-500'>
+              className='uppercase tracking-[3px] text-[12.5px] mb-5 inline-block text-white'>
                 { WhyUsContent.heading.subTitle }
             </motion.span>
           )}
@@ -65,7 +70,7 @@ const WhyUs = ({ className }) => {
                 transition: { delay: 0.5, duration: 0.3 }
               }}
               viewport={{ once: true}}
-              className='text-2xl lg:text-4xl'>
+              className='text-2xl lg:text-4xl font-bold text-white'>
                 { WhyUsContent.heading.title }
             </motion.h2>
           )}

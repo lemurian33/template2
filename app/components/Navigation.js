@@ -63,8 +63,8 @@ export default function Navigation() {
           <div>
            <Link
               href="/"
-              className="text-[22px] text-gray-700 font-bold">
-                Lemurian Agency
+              className="text-[22px] text-white font-bold">
+                Unlcoaching
                 <span className="text-orange-600">.</span>
             </Link>
           </div>
@@ -72,7 +72,7 @@ export default function Navigation() {
             <ul role="list" className="hidden md:flex space-x-8">
               { navigationMenu.map((menu, index) => (
                 <li key={menu.label}>
-                  <Link href={menu.href} className={`relative before:content-['']
+                  <Link href={menu.href} className={`text-white relative before:content-['']
                      before:absolute before:bottom-0 before:left-0 before:w-full
                      before:h-[2px] before:bg-orange-600 before:origin-[100%, 50%]
                      before:transistion-all before:duration-300 before:ease-in-out
@@ -87,8 +87,8 @@ export default function Navigation() {
                 </li>
               ))}
             </ul>
-            <button className="md:hidden text-md" onClick={()=> setOpen(true)}>
-              {open ? null: <HiMenu />}
+            <button className="md:hidden text-md  " onClick={()=> setOpen(true)}>
+              {open ? null: <HiMenu className="text-white" />}
             </button>
           </div>
         </div>
@@ -159,7 +159,7 @@ export default function Navigation() {
                         <div>
                           <Link href="/contact" className="block text-center text-[11.5px]
                             tracking-2[2px] font-bold uppercase bg-orange-600 py-4 px-5 text-white rounded-md">
-                            Contact us now
+                            Contacter moi
                           </Link>
                         </div>
                       </div>
