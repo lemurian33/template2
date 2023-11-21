@@ -45,7 +45,7 @@ const Hero = ({ className }) => {
   return (
     <section className={`${className}`} ref={ref}>
       <div className="container px-4 mx-auto">
-        <div className="lg:flex justify-between items-center space-x-0 mt-10 ">
+        <div className="lg:flex justify-between items-center space-x-0 mt-10 mb-20 ">
           <div className="w-full lg:w-8/12 lg:mb-0">
             <div className="grid grid-cols-4 sm:grid-cols-2 md:grid-cols-4 ">
               {statContent.stats.map((stat, index) =>

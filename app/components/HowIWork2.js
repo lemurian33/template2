@@ -13,49 +13,63 @@ import {
 
 const HowIWorkContent = {
   heading: {
-    title:'When creativity meets developement web',
-    subTitle: "How it work",
-    description: "Nous nous spécialisons dans la création d'applications web sur-mesure, destinées à optimiser le quotidien de nos clients."
+    title:'Un accompagnement personaliser',
+    subTitle: "Comment ça marche ?",
+    description:"Je vous accompagne dans votre entrainement afin e progresser rapidement et efficacement, Je vous accompagne dans votre entrainement afin e progresser rapidement et efficacement",
   },
   step: [
     {
-      number: '01',
-      icon: BiHardHat,
-      title: "Project Initiation",
-      description: " Le gain de temps, l'efficacité et la personnalisation sont les maîtres mots !",
-      btn: {
-        href:"#",
-        label:"Learn More"
-      }
-    },
-    {
-      number: '02',
-      icon: BiPaintRoll,
-      title: "Conception design",
-      description: " Le gain de temps, l'efficacité et la personnalisation sont les maîtres mots !",
-      btn: {
-        href:"#",
-        label:"Learn More"
-      }
-    },
-    {
-      number: '03',
-      icon: BiNote,
-      title: "Project performance",
-      description: " Le gain de temps, l'efficacité et la personnalisation sont les maîtres mots !",
-      btn: {
-        href:"#",
-        label:"Learn More"
-      }
-    },
-    {
-      number: '04',
+      price: '100€',
       icon: BiLayer,
-      title: "Project performance",
-      description: " Le gain de temps, l'efficacité et la personnalisation sont les maîtres mots !",
+      title: "Pack Trainnig Atheler",
+      description: {
+        content:"Programme d'entrainement personnalisé en fonction de ta discipline (Foot, Boxe,...)",
+        programme:"Programme de réathlétisation adapté à ta pathologie et ta discipline",
+        suivi:"Suivi entrainement avec correction des mouvements",
+        message:"Messagerie privée 7j/7 sur WhatsApp/ mail",
+        application:"Application Fournie Team Unl",
+        plan:"Plan 100% personnalisé et adapté",
+        bilan:"Bilan toutes les deux semaines"
+      }, 
       btn: {
-        href:"#",
-        label:"Learn More"
+        href:"/projects",
+        label:"Choose Plan"
+      }
+    },
+    {
+      price: '150€',
+      icon: BiPaintRoll,
+      title: "Pack Starter",
+      description: {
+        content:"Programme d'entrainement personnalisé en fonction de ta discipline (Foot, Boxe,...)",
+        programme:"Programme de réathlétisation adapté à ta pathologie et ta discipline",
+        suivi:"Suivi entrainement avec correction des mouvements",
+        message:"Messagerie privée 7j/7 sur WhatsApp/ mail",
+        application:"Application Fournie Team Unl",
+        plan:"Plan 100% personnalisé et adapté",
+        bilan:"Bilan toutes les deux semaines"
+      }, 
+      btn: {
+        href:"/projects",
+        label:"Choose Plan"
+      }
+    },
+    {
+      price: '200€',
+      icon: BiNote,
+      title: "Pack Elite Premium",
+      description: {
+        content:"Programme d'entrainement personnalisé en fonction de ta discipline (Foot, Boxe,...)",
+        programme:"Programme de réathlétisation adapté à ta pathologie et ta discipline",
+        suivi:"Suivi entrainement avec correction des mouvements",
+        message:"Messagerie privée 7j/7 sur WhatsApp/ mail",
+        application:"Application Fournie Team Unl",
+        plan:"Plan 100% personnalisé et adapté",
+        bilan:"Bilan toutes les deux semaines"
+      }, 
+      btn: {
+        href:"/projects",
+        label:"Choose Plan"
       }
     },
   ],
@@ -163,7 +177,7 @@ const HowIWork = ({ className }) => {
               </div>
             </div>
           </div>
-          <div className='grid grid-cols-1 lg:grid-cols-4 gap-4 lg:w-10/12 mx-auto'>
+          <div className='grid grid-cols-1 lg:grid-cols-3 gap-4 lg:w-10/12 mx-auto'>
             {HowIWorkContent.step.map((step, index) => {
               index *= 0.2
               return (
@@ -180,48 +194,66 @@ const HowIWork = ({ className }) => {
                   viewport={ { once: true}}
                   key={step.title}
                   whileHover={{ y: -10, transition: 0.1, }}
-                  className='group duration-300 pt-32 pl-10 pr-10 pb-20 bg-white
-                  relative overflow-hidden hover:bg-[#fb9725] hover: shadow-2xl  rounded-md'>
-                  <span className='text-[200px] inline-block z-[1] font-semibold
+                  className='group duration-300 pl-10 pr-10 pb-20  bg-[#2f2e2e]
+                  relative overflow-hidden  hover: shadow-2xl rounded-md'>
+                  {/* <span className='text-[200px] inline-block z-[1] font-semibold
                     absolute -top-[120px] opacity-5 left-0 leading-0'>
                       { step.number }
-                  </span>
-                  <div className='absolute top-10 right-10'>
+                  </span> */}
+                  {/* <div className='absolute top-10 right-10'>
                     <span className='text-3xl text-orange-600 duration-300 transition-all
-                    ease_in_out group-hover:text-white'>
+                      ease_in_out group-hover:text-white'>
                       <step.icon/>
                     </span>
-                  </div>
-                  <div className='relative z-40 flex gap-3 items-start'>
-                    <div className='font-semibold duration-300 transistion-all ease-in-out
-                      group-hover:text-white group-hover:text-opacity-50'>
+                  </div> */}
+                  {/* <div className='relative z-40 flex items-start'> */}
+                    {/* <div className='text-white font-semibold duration-300 transistion-all ease-in-out
+                      group-hover:text-orange-600 group-hover:text-opacity-50'>
                         { step.number}
-                    </div>
+                    </div> */}
                     <div>
-                      <h3 className='text-[18px] mb-4 duration-300 transistion-all ease-in-out
-                        group-hover:text-white'>
+                      <h3 className='text-orange-400 text-center text-[18px] mb-5 pt-5 pb-5 duration-300 transistion-all ease-in-out
+                         border-b-[1px] border-spacing-[7px]'>
                           { step.title}
                       </h3>
-                      <p className='leading-relaxed text-[15px] text-gray-500 mb-7
-                        duration-300 transistion-all ease-in-out group-hover:text-white'>
-                          {step.description}
-                      </p>
-                        <Link href={step.btn.href} className={`text-[12px] tracking-[2px] uppercase
-                          pb-2 inline-block  duration-300 transistion-all bg-white-600
-                          ease-in-out relative before:content-['']
-                          before:absolute before:bottom-0 before:left-0 before:w-full
-                          before:h-[2px] before:bg-orange-600 before:origin-[100%, 50%]
-                          before:transistion-all before:duration-300 before:ease-in-out
-                          before:scale-x-0 before:scale-y-[1] before:scale-z[1]
-                          before:wil-change-transform hover:before:origin-[100%, 0%]
-                          hover:before:scale-x-[1] hover:before:scale-y-[1]
-                          hover:before:scale-z-[1]`}>
+                    
+                      <ul className role="list" class='marker:text-orange-400 list-disc pl-5 space-y-3 text-white mb-5'  >   
+                        <li className='list-none text-center text-orange-400 mb-5 mt-5'>
+                          {step.price}
+                            <span className='text-white'>/mois</span> 
+                        </li>             
+                        <li className='leading-relaxed text-[15px] text-white mb-5  pb-5
+                          duration-300 transistion-all ease-in-out border-b-[1px] border-spacing-[7px] text-left'>
+                          {step.description.content}
+                        </li>
+                        <li className='leading-relaxed text-[15px] text-white mb-5 pb-5
+                          duration-300 transistion-all ease-in-out border-b-[1px] border-spacing-[7px] text-left'>
+                          {step.description.programme}
+                        </li>
+                        <li className='leading-relaxed text-[15px] text-white mb-5 pb-5
+                          duration-300 transistion-all ease-in-out border-b-[1px] border-spacing-[7px] text-left'>
+                          {step.description.suivi}
+                        </li>
+                        <li className='leading-relaxed text-[15px] text-white mb-5 pb-5
+                          duration-300 transistion-all ease-in-out border-b-[1px] border-spacing-[7px] text-left'>
+                          {step.description.message}
+                        </li>
+                        <li className='leading-relaxed text-[15px] text-white mb-5 pb-5
+                          duration-300 transistion-all ease-in-out border-b-[1px] border-spacing-[7px] text-left'>
+                          {step.description.application}
+                        </li>
+                      </ul>
+                      <Link 
+                        href={step.btn.href} 
+                        className=" ml-15 transistion-all duration-300 ease-in-out text-[11.5px]
+                          tracking-[2px] font-bold uppercase bg-orange-600 py-3 px-5 rounded text-white inline-block
+                          hover:bg-white hover:text-orange-600 hover:shadow-2xl mb-10">
                             {step.btn.label}
-
-                        </Link>
+                      </Link>                  
+               
                     </div>
-                  </div>
-                </motion.div>
+                  {/* </div> */}
+                </motion.div>       
               )
             })}
           </div>

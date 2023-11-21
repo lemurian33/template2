@@ -95,7 +95,7 @@ const footerContent = {
 
 const Footer = () => {
   return (
-    <div className="pt-7 mt-10 md:mt-14 md:pt-14 border-t border-t-gray-100 text-center text-gray-500">
+    <div className="pt-7 border-t-gray-100 text-center text-gray-500">
       <p className="text-center items-center mx-auto text-sm">
         &copy; 2023 {" "}
         <Link href="/" className="text-orange-600">Lemurian Agency. </Link>

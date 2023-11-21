@@ -7,18 +7,18 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 const aboutContent = {
   heading: {
-    title: "When creativity meets developement web",
-    subTitle: "About Me"
+    title: "Team Jeremy",
+    subTitle: "Application"
   },
   content: {
-    img: "/images/hero-img-1-min.jpg",
-    title: "Architects of Inovation, Builders of Beauty  web application",
+    img: "/images/appUnlpng.png",
+    title: "Web application",
     description:
-      "Je réalise depuis plus de 2 ans des outils sur-mesure à destination d'entreprises de toutes tailles. Je transforme chaque besoin de mes clients en solution web, en garantissant le respect de leurs règles métiers.",
+      "The instructors in this martial arts course are exceptional. They are knowledgeable, patient, and provide constructive feedback and ensure that each student gets individual attention.",
 
     btn: {
       href: "/about",
-      label: "Learn about me"
+      label: "Download on Store"
     }
   }
 };
@@ -78,12 +78,12 @@ const About = ({ className }) => {
             <div className="mb-7 lg:mb-0 lg:w-6/12 lg:order-2 relative">
               <motion.div style={{ y: img1 }} className="z-[2] relative">
                 <Image
-                  src="/images/jeremy Prat.jpg"
+                  src="/images/appUnlpng.png"
                   className="object-cover
-                  !w-full !h-[600] lg:max-w-2xl object-center"
-                  width={400}
-                  height={600}
-                  alt="About Image"
+                  !w-full !h-[400] lg:max-w-2xl object-center"
+                  width={300}
+                  height={400}
+                  alt="application web"
                 />
               </motion.div>
             </div>
@@ -100,7 +100,7 @@ const About = ({ className }) => {
                   }
                 }}
                 viewport={{ once: true }}
-                className="text-2xl mb-7 text-gray-500"
+                className="text-4xl mb-7 text-orange-600"
               >
                 {aboutContent.content.title}
               </motion.h3>
@@ -119,6 +119,24 @@ const About = ({ className }) => {
                 className="leading-relaxed mb-14 text-white "
               >
                 {aboutContent.content.description}
+              </motion.p>
+              <motion.p
+                initial = {{ opacity: 0, y: 10 }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                  transition: {
+                    delay: 0.5,
+                    duration:0.5,
+                  }
+                }}
+                viewport={ { once: true}}>
+                <Link href="/about" className="transistion-all duration-300
+                  ease-in-out text-[11.5px] tracking-[2px] font-bold uppercase
+                  bg-orange-600 py-4 px-5 rounded text-white inline-block
+                  hover:bg-white hover:text-orange-600 hover:shadow-2xl">
+                  {aboutContent.content.btn.label}
+                </Link>
               </motion.p>
               
            
