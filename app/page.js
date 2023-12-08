@@ -14,7 +14,7 @@ export default function Home() {
       <About className="py-20 lg:py-22 overflow-hidden bg-[#2f2e2e]"/>
       <HowIWork2 className="py-16 !pt-32 lg:py-32"/>
       {/* <Testimonial className="py-6 lg:py-32"/> */}
-      <Team className="py-16 lg:py-22 overflow-hidden bg-[#2f2e2e]"/>
+      <Team className="py-16 lg:py-22 overflow-hidden heigth:400 width:400 bg-[#2f2e2e]"/>
       <RecentBlog className="pt-14 pb-15 lg:pb-32"/>
       <Subscribe className="py-16 pt-64 -mt-48 lg:py-32 bg-[#2f2e2e]"/>
     </>
