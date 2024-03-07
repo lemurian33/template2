@@ -117,7 +117,7 @@ const HowIWork = ({ className }) => {
   return (
     <>
       {/* Content left - subtitle */}
-      <section className={` ${className}`}>
+      <section className={`${className}`}>
         <div className='container px-4 mx-auto'>
           <div className='lg:flex justify-center mb-20 lg:mb-36'>
             <div className='w-full lg:w-8/12 lg:flex gap-0 items-center'>

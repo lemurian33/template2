@@ -14,10 +14,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-[#232323] overflow-x-hidden w-full`}>
+      <body className={`${inter.className} bg-[#2f2e2e] overflow-x-hidden w-full`}>
         <Navigation />
         {children}
-        <Footer className="bg-[#232323] py-16 md:py-24"/>
+        <Footer className="bg-[#FFFFFF] py-16 md:py-24"/>
       </body>
     </html>
   )

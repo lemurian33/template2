@@ -7,18 +7,16 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 const aboutContent = {
   heading: {
-    title: "When creativity meets developement web",
-    subTitle: "About Me"
+    title: "Qui suis-je ?",
+    subTitle: "Mes valeurs"
   },
   content: {
     img: "/images/hero-img-1-min.jpg",
-    title: "Architects of Inovation, Builders of Beauty  web application",
+    // title: "Architects of Inovation, Builders of Beauty  web application",
     description:
       "Je réalise depuis plus de 2 ans des outils sur-mesure à destination d'entreprises de toutes tailles. Je transforme chaque besoin de mes clients en solution web, en garantissant le respect de leurs règles métiers. Je réalise depuis plus de 2 ans des outils sur-mesure à destination d'entreprises de toutes tailles. Je transforme chaque besoin de mes clients en solution web, en garantissant le respect de leurs règles métiers.",
-      btn: {
-      href: "/about",
-      label: "Learn about me"
-    }
+
+    // }
   }
 };
 
@@ -53,6 +51,7 @@ const About = ({ className }) => {
             >
               {aboutContent.heading.subTitle}
             </motion.span>}
+
           {/* About - center - Title */}
           {aboutContent.heading.title &&
             <motion.h2
@@ -71,7 +70,8 @@ const About = ({ className }) => {
               {aboutContent.heading.title}
             </motion.h2>}
         </div>
-        {/* About - center - Card Image */}
+
+        {/* About - center - Card Image1 */}
         <div className="lg: flex justify-center">
           <div className="lg:w-8/12 lg:flex gap-20 items-center">
             <div className="mb-7 lg:mb-0 lg:w-6/12 lg:order-2 relative">
@@ -86,9 +86,10 @@ const About = ({ className }) => {
                 />
               </motion.div>
             </div>
+
             {/* About - center - title */}
             <div className="lg:w-6/12 mt-10">
-              <motion.h3
+              {/* <motion.h3
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{
                   opacity: 1,
@@ -102,7 +103,8 @@ const About = ({ className }) => {
                 className="text-2xl mb-7 text-gray-500"
               >
                 {aboutContent.content.title}
-              </motion.h3>
+              </motion.h3> */}
+
               {/* About - center - block text */}
               <motion.p
                 initial={{ opacity: 0, y: 10 }}
@@ -119,8 +121,8 @@ const About = ({ className }) => {
               >
                 {aboutContent.content.description}
               </motion.p>
-                {/* About - center - block text */}
-               
+
+              {/* About - center - block text */}               
               <motion.p
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{
@@ -133,19 +135,11 @@ const About = ({ className }) => {
                 }}
                 viewport={{ once: true }}
               >
-                {/* <Link
-                  href="/about"
-                  className="transistion-all duration-300
-                  ease-in-out text-[11.5px] tracking-[2px] font-bold uppercase
-                  bg-orange-600 py-4 px-5 rounded text-white inline-block
-                  hover:bg-white hover:text-orange-600 hover:shadow-2xl"
-                >
-                  {aboutContent.content.btn.label}
-                </Link> */}
               </motion.p>
             </div>
           </div>
         </div>
+
         {/* About - center - Card Image */}
         <div className="lg: flex justify-center mt-20">
           <div className="lg:w-8/12 lg:flex gap-20 items-center">
@@ -161,6 +155,7 @@ const About = ({ className }) => {
                 />
               </motion.div>
             </div>
+
             {/* About - center - title */}
             <div className="lg:w-6/12 mt-10">
               <motion.h3
@@ -178,6 +173,7 @@ const About = ({ className }) => {
               >
                 {aboutContent.content.title}
               </motion.h3>
+
               {/* About - center - block text */}
               <motion.p
                 initial={{ opacity: 0, y: 10 }}
@@ -206,15 +202,6 @@ const About = ({ className }) => {
                 }}
                 viewport={{ once: true }}
               >
-                {/* <Link
-                  href="/about"
-                  className="transistion-all duration-300
-                  ease-in-out text-[11.5px] tracking-[2px] font-bold uppercase
-                  bg-orange-600 py-4 px-5 rounded text-white inline-block
-                  hover:bg-white hover:text-orange-600 hover:shadow-2xl"
-                >
-                  {aboutContent.content.btn.label}
-                </Link> */}
               </motion.p>
             </div>
           </div>

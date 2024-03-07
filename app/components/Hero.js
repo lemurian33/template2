@@ -8,26 +8,25 @@ import { motion, useScroll, useTransform } from "framer-motion";
 const statContent = {
   stats: [
     {
-      number: "50 +",
-      label: "Students"
+      number: "+ 350",
+      label: "Transformations réussit"
     },
     {
-      number: "10 +",
-      label: "Years Exp"
+      number: "+ 8",
+      label: "Années expériences"
     }
   ]
 };
 
 const heroContent = {
   intro: {
-    title: "Personal Coach Jeremy",
-    subTitle: "+50 +10",
-    subTitles: " Students - Years Experiences",
+    title: "Coaching ",
+    subTitle: "Personnel",
     description:
-      "Je suis Andy Ramaroson, un développeur web FullStack JS basée sur Bordeaux (N. Aquitaine, 33) et je réalise tous types de logiciels et d'applications sur mesure en me basant sur des technologies .",
+    "Allier entraînement rigoureux et nutrition équilibrée pour un mode de vie sain et durable.",
     btn: {
-      href: "/projects",
-      label: "Commancer"
+      href: "/about",
+      label: "🧡 De la team !",
     }
   }
 };
@@ -44,20 +43,20 @@ const Hero = ({ className }) => {
 
   return (
     <section className={`${className}`} ref={ref}>
-      <div className="container px-4 mx-auto">
-        <div className="lg:flex justify-between items-center space-x-0 mt-10 mb-20 ">
+      <div className="container px-4 mx-auto md:mt-28">
+        <div className="lg:flex justify-between items-center space-x-0  ">
           <div className="w-full lg:w-8/12 lg:mb-0">
-            <div className="grid grid-cols-4 sm:grid-cols-2 md:grid-cols-4 ">
+            <div className="grid grid-cols-2 md:grid-cols-4 ">
               {statContent.stats.map((stat, index) =>
                 <div
                   className="text-center text-white lg:text-left mb-10"
                   key={stat.label}
                 >
-                  <strong className="text-white text-4xl xl:text-[52px] font-bold leading-tight">
+                  <strong className="text-white lg:text-left text-4xl xl:text-[52px] font-bold leading-tight ">
                     {stat.number}
                   </strong>
                   <br />
-                  <span>
+                  <span className="">
                     {stat.label}
                   </span>
                 </div>
@@ -76,9 +75,26 @@ const Hero = ({ className }) => {
                 }}
                 viewport={{ once: true }}
                 data-testid="hero-title"
-                className=" text-orange-600 text-3xl sm:text-4xl md:text-5xl lg:text-6xl w-auto lg:w-screen max-w-xl mb-4 md:mb-8"
+                className=" text-orange-600 font-bold text-3xl sm:text-6xl md:text-6xl lg:text-7xl w-auto lg:w-screen max-w-xl mb-2"
               >
                 {heroContent.intro.title}
+              </motion.h1>}
+
+            {/* Content left - subTitle */}
+
+            {heroContent.intro.subTitle &&
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                  transition: { delay: 0.2, duration: 0.5 }
+                }}
+                viewport={{ once: true }}
+                data-testid="hero-subTitle"
+                className=" text-white text-3xl font-bold sm:text-6xl md:text-6xl lg:text-7xl w-auto lg:w-screen max-w-xl mb-4 md:mb-8"
+              >
+                {heroContent.intro.subTitle}
               </motion.h1>}
 
             {/* Content left - description */}
@@ -93,7 +109,7 @@ const Hero = ({ className }) => {
                 }}
                 viewport={{ once: true }}
                 className="leading-relaxed text-white w-auto lg:w-screen max-w-xl
-                  text-base lg:text-lg mb-10 lg:mb-16"
+                  text-base xl:text-xl mb-10 lg:mb-16"
               >
                 {heroContent.intro.description}
               </motion.p>}
@@ -113,8 +129,8 @@ const Hero = ({ className }) => {
                 <Link
                   href={heroContent.intro.btn.href}
                   className="transistion-all duration-300 ease-in-out text-[11.5px]
-                    tracking-[2px] font-bold uppercase bg-orange-600 py-4 px-5
-                    rounded text-white inline-block hover:bg-white hover:text-orange-600 hover:shadow-2xl mb-10"
+                    tracking-[2px] font-bold uppercase bg-white py-4 px-5
+                    rounded text-orange-600 inline-block hover:bg-transparent hover:text-white hover:shadow-2xl mb-10"
                 >
                   {heroContent.intro.btn.label}
                 </Link>
@@ -139,7 +155,7 @@ const Hero = ({ className }) => {
               className="z-[2] relative bg-cover bg-center"
             >
               <Image
-                src="/images/coach1.jpg"
+                src="/images/jeremy.jpg"
                 width={800}
                 height={985}
                 alt="hero image"
